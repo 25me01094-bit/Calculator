@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <script src="app.js"></script>
+    <style>
+    *{
+            font-weight: 500;
+    }
+    body {
+        background-color: rgb(184, 185, 208);
+        background-image: url(image.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-blend-mode: multiply;
+    }
+        .main{
+            align-content: center;
+            justify-items: center;
+        }
+     #first,#second,#third,#fourth,#fifth,#sixth{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+     }    
+    .box{
+        width: 50px;
+        height: 50px;
+        background-color: whitesmoke;
+        border-style: solid;
+        border-width: 3px;
+        box-shadow: 0px 0px 15px rgba(0,0,0,0.15);
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 90%;
+        font-weight: 700;
+    }
+    </style>
+</head>
+<body>
+    <div class="main" style="width: 100vw;height: 100vh;">
+        <script src="app.js"></script>
+        <div style="align-items: center;display: flex;justify-content: center;"><input id="display" type="text" readonly style="justify-items: right; height: 60px;width: 230px;background-color: rgb(225, 220, 220);font-size: 1.5rem;"></input></div>
+        <div id="first">
+            <button class="box" onclick="showHistory()">Last</button>
+            <button class="box" onclick="allclear()">AC</button>
+            <button class="box" onclick="include('00')">00</button>
+            <button class="box" onclick="include('-')">-</button>
+        </div>
+        <div id="second">
+            <button class="box" onclick="include('1')">1</button>
+            <button class="box" onclick="include('2')">2</button>
+            <button class="box" onclick="include('3')">3</button>
+            <button class="box" onclick="include('+')">+</button>
+        </div>
+        <div id="third">
+            <button class="box" onclick="include('4')">4</button>
+            <button class="box" onclick="include('5')">5</button>
+            <button class="box" onclick="include('6')">6</button>
+            <button class="box" onclick="include('*')">*</button>
+        </div>
+        <div id="fourth">
+            <button class="box" onclick="include('7')">7</button>
+            <button class="box" onclick="include('8')">8</button>
+            <button class="box" onclick="include('9')">9</button>
+            <button class="box" onclick="include('/')">/</button>
+        </div>
+        <div id="fifth">
+            <button class="box" onclick="include('3.14')">&#960</button>
+            <button class="box" onclick="include('2.718')">e</button>
+            <button class="box" onclick="include('000')">000</button>
+            <button class="box" onclick="include('0000')">0000</button>
+        </div>
+        <div id="sixth">
+            <button class="box" onclick="include('0')">0</button>
+            <button class="box" onclick="include('.')">.</button>
+            <button style="display:flex; justify-content: center;align-items:center;width: 112px; height: 50px;border: 1px solid;box-shadow: 0px 0px 15px rgba(0,0,0,0.15);font-size: 90%; font-weight: 700;background-color: whitesmoke;" onclick="calculate()">=</button>
+        </div>
+    </div>
+</body>
+</html>
