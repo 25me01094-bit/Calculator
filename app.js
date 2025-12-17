@@ -35,7 +35,7 @@ function calculate(){
     if(operator==='-') result=num1-num2;
     if(operator==='*') result=num1*num2;
     if(operator==='/') result=num1/num2;
-    if(operator==='sqrt') result=num1*Math.sqrt(num2);
+    if(operator==='sqrt')result=Math.sqrt(num2);
     if(operator==='^') result=power(num1,num2);
     document.getElementById("display").value=result;
     num1=result;
