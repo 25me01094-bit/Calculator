@@ -41,12 +41,28 @@
         font-size: 90%;
         font-weight: 700;
     }
+    .box:hover{
+        transform: scale(1.2);
+        background-color: rgb(155, 143, 98);
+        transition: transform 0.65s ease-in-out;
+        transition: background-color 0.5s ease-in-out;
+    }
+    #equal:hover{
+        background-color: rgb(255, 0, 0);
+        transform: scale(1.2);
+        transition: transform  0.65s ease-in;
+        transition: background-color 0.65s ease-in-out;
+    }
+    #display:hover{
+        transform: scale(1.1);
+        transition: transform 0.5s ease-in;
+    }
     </style>
 </head>
 <body>
     <div class="main" style="width: 100vw;height: 100vh;">
         <script src="app.js"></script>
-        <div style="align-items: center;display: flex;justify-content: center;"><input id="display" type="text" readonly style="justify-items: right; height: 60px;width: 230px;background-color: rgb(225, 220, 220);font-size: 1.5rem;"></input></div>
+        <div style="align-items: center;display: flex;justify-content: center;"><input id="display" type="text" readonly style="justify-items: right; height: 60px;width: 230px;background-color: rgb(225, 220, 220);font-size: 1.5rem;cursor: crosshair;"></input></div>
         <div id="first">
             <button class="box" onclick="showHistory()">Last</button>
             <button class="box" onclick="allclear()">AC</button>
@@ -74,13 +90,13 @@
         <div id="fifth">
             <button class="box" onclick="include('3.14')">&#960</button>
             <button class="box" onclick="include('2.718')">e</button>
-            <button class="box" onclick="include('000')">000</button>
-            <button class="box" onclick="include('0000')">0000</button>
+            <button class="box" onclick="include('^')">^</button>
+            <button class="box" onclick="include('sqrt')">&radic;</button>
         </div>
         <div id="sixth">
             <button class="box" onclick="include('0')">0</button>
             <button class="box" onclick="include('.')">.</button>
-            <button style="display:flex; justify-content: center;align-items:center;width: 112px; height: 50px;border: 1px solid;box-shadow: 0px 0px 15px rgba(0,0,0,0.15);font-size: 90%; font-weight: 700;background-color: whitesmoke;" onclick="calculate()">=</button>
+            <button id="equal" style="display:flex; justify-content: center;align-items:center;width: 112px; height: 50px;border: 1px solid;box-shadow: 0px 0px 15px rgba(0,0,0,0.15);font-size: 90%; font-weight: 700;" onclick="calculate()">=</button>
         </div>
     </div>
 </body>
